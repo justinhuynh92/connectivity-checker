@@ -1,10 +1,16 @@
 #use urllib.request to get the data from the url
-#write a function that takes a url
 #returns a response
 
 #import urllib
 import urllib.request as urllib
 
+print("This is a site connectivity checker program")
+input_url = input("Input the url of the site: ")
+
+#write a function that takes a url
 def main(url):
-    print("This is a site connectivity checker program")
-    print("Input the url of the site")
+    print("Checking connectivity ")
+
+    #open up url
+    response = urllib.urlopen(url)
+    print("Connected to", url, "successfully")
